@@ -8,15 +8,32 @@ class ApiClient {
   ApiClient({required this.baseUrl, Map<String, String>? headers})
       : headers = headers ?? {'Content-Type': 'application/json'};
 
-  Future<http.Response> get(String endpoint, {Map<String, String>? queryParams}) async {
-    final uri = Uri.parse('$baseUrl$endpoint').replace(queryParameters: queryParams);
-    return await http.get(uri, headers: headers);
+  Future<Map<String, dynamic>> get(String endpoint, {Map<String, String>? queryParams}) async {
+    try {
+      final uri = Uri.parse('$baseUrl$endpoint').replace(queryParameters: queryParams);
+      final response = await http.get(uri, headers: headers);
+
+      return _processResponse(response);
+    } catch (e) {
+      throw Exception('GET request failed: $e');
+    }
   }
 
-  Future<http.Response> post(String endpoint, {Map<String, dynamic>? body}) async {
-    final uri = Uri.parse('$baseUrl$endpoint');
-    return await http.post(uri, headers: headers, body: jsonEncode(body));
+  Map<String, dynamic> _processResponse(http.Response response) {
+    if (response.statusCode == 200) {
+      return jsonDecode(response.body);
+    } else {
+      throw Exception(
+          'HTTP Error: ${response.statusCode}, Response: ${response.body}');
+    }
   }
 }
 
-final ApiClient api = ApiClient(baseUrl: 'https://api.sportmonks.com/v3/football/');
+final api = ApiClient(
+  baseUrl: 'https://v3.football.api-sports.io/',
+  headers: {
+    'x-rapidapi-host': 'v3.football.api-sports.io',
+    'x-rapidapi-key': '2d5249be42745672e7c2d83510fdd3d9',
+  },
+);
+

@@ -1,36 +1,15 @@
-import 'dart:convert';
 import 'package:kairatapp/app/api/api.dart';
-import 'package:kairatapp/main/model/match.dart';
-import 'package:kairatapp/main/model/matches.dart';
+import 'package:kairatapp/main/new_model/match_model.dart';
 
 extension MainApi on ApiClient {
-  Future<Matches?> getMatches() async {
+  Future<FootballData?> fetchLiveFixtures() async {
     try {
-      final result = await api.get(
-        'fixtures',
-        queryParams: {
-          'include':
-              'participants;league;venue;state;scores;events.type;events.period;events.player;statistics.type;sidelined.sideline.player;sidelined.sideline.type;weatherReport',
-          'api_token':
-              'dJVV3AvyvKEReTKIZ8TEwFslQLe29KI6T3ladc2K3onAZFUQWVARzcIXqzMI',
-        },
-      );
+      final data = await api.get('fixtures', queryParams: {'date': '2025-03-26'});
 
-      if (result.statusCode == 200) {
-        final jsonResponse = json.decode(result.body);
-
-        final response = Matches.fromJson(jsonResponse);  
-
-        print('response::: ${response.data.map((e) => e.toJson()).toList()}');
-        
-        return response;
-      } else {
-        print('Failed to load data: ${result.statusCode}');
-        return null;
-      }
+      return FootballData.fromJson(data);
     } catch (e) {
-      print('Error: $e');
-      return null;
+      print('Error fetching: $e');
+      return null; 
     }
   }
 }

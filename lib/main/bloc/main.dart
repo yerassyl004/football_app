@@ -1,10 +1,9 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:kairatapp/main/model/match.dart';
-import 'package:kairatapp/main/model/match_events.dart';
-import 'package:kairatapp/main/model/matches.dart';
+import 'package:kairatapp/main/new_model/match_model.dart';
 import 'package:kairatapp/main/repository/main_repository.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 part 'main.freezed.dart';
 
@@ -23,6 +22,7 @@ class MainState with _$MainState {
 
   const factory MainState.initial() = InitialMainState;
   const factory MainState.loading() = LoadingMainState;
+  const factory MainState.empty() = EmptyMainState;
   const factory MainState.loaded(MainData data) = LoadedMainState;
   const factory MainState.error(String? error) = ErrorMainState;
 }
@@ -30,10 +30,8 @@ class MainState with _$MainState {
 @freezed
 class MainData with _$MainData {
   const factory MainData({
-    @Default([]) List<MatchData> matches,
-    // @Default([]) List<Statistic> statistics,
-    // @Default([]) List<Score> scores,
-    // @Default([]) List<Team> teams,
+    @Default([]) List<MatchModel> matches,
+    @Default([]) List<String> scores,
   }) = _MainData;
 }
 
@@ -46,18 +44,30 @@ class MainBloc extends Bloc<MainEvent, MainState> {
   }
 
   Future<void> _initial(InitialMainEvent event, Emitter<MainState> emit) async {
+    bool isGranted = await Permission.notification.isGranted;
+    if (isGranted) {
+    } else {
+      await Permission.notification.request();
+    }
     emit(LoadingMainState());
     add(MainEvent.loadData());
   }
 
   Future<void> _load(LoadMainEvent event, Emitter<MainState> emit) async {
-    emit(MainState.loading());
-    final matches = await _repository.getMatches();
+    try {
+      emit(MainState.loading());
 
-    if (matches != null) {
-      emit(LoadedMainState(MainData(matches: matches.data)));
-    } else {
-      print("Error matches");
+      final matches = await _repository.getMatches();
+
+      if (matches?.matches.isEmpty ?? true) {
+        emit(EmptyMainState());
+        return;
+      }
+
+      final scores = _repository.scoresList(matches!.matches);
+      emit(LoadedMainState(MainData(matches: matches.matches, scores: scores)));
+    } catch (e) {
+      emit(ErrorMainState('Error: ${e.toString()}'));
     }
   }
 }

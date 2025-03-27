@@ -12,8 +12,7 @@ part of 'main.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$MainEvent {
@@ -22,39 +21,45 @@ mixin _$MainEvent {
     required TResult Function() initial,
     required TResult Function() loadData,
     required TResult Function(String? error) error,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadData,
     TResult? Function(String? error)? error,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadData,
     TResult Function(String? error)? error,
     required TResult orElse(),
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(InitialMainEvent value) initial,
     required TResult Function(LoadMainEvent value) loadData,
     required TResult Function(ErrorMainEvent value) error,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(InitialMainEvent value)? initial,
     TResult? Function(LoadMainEvent value)? loadData,
     TResult? Function(ErrorMainEvent value)? error,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(InitialMainEvent value)? initial,
     TResult Function(LoadMainEvent value)? loadData,
     TResult Function(ErrorMainEvent value)? error,
     required TResult orElse(),
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -79,20 +84,18 @@ class _$MainEventCopyWithImpl<$Res, $Val extends MainEvent>
 
 /// @nodoc
 abstract class _$$InitialMainEventImplCopyWith<$Res> {
-  factory _$$InitialMainEventImplCopyWith(
-    _$InitialMainEventImpl value,
-    $Res Function(_$InitialMainEventImpl) then,
-  ) = __$$InitialMainEventImplCopyWithImpl<$Res>;
+  factory _$$InitialMainEventImplCopyWith(_$InitialMainEventImpl value,
+          $Res Function(_$InitialMainEventImpl) then) =
+      __$$InitialMainEventImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
 class __$$InitialMainEventImplCopyWithImpl<$Res>
     extends _$MainEventCopyWithImpl<$Res, _$InitialMainEventImpl>
     implements _$$InitialMainEventImplCopyWith<$Res> {
-  __$$InitialMainEventImplCopyWithImpl(
-    _$InitialMainEventImpl _value,
-    $Res Function(_$InitialMainEventImpl) _then,
-  ) : super(_value, _then);
+  __$$InitialMainEventImplCopyWithImpl(_$InitialMainEventImpl _value,
+      $Res Function(_$InitialMainEventImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of MainEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -112,7 +115,7 @@ class _$InitialMainEventImpl extends InitialMainEvent
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties..add(DiagnosticsProperty('type', 'MainEvent.initial'));
+    properties.add(DiagnosticsProperty('type', 'MainEvent.initial'));
   }
 
   @override
@@ -201,9 +204,8 @@ abstract class InitialMainEvent extends MainEvent {
 /// @nodoc
 abstract class _$$LoadMainEventImplCopyWith<$Res> {
   factory _$$LoadMainEventImplCopyWith(
-    _$LoadMainEventImpl value,
-    $Res Function(_$LoadMainEventImpl) then,
-  ) = __$$LoadMainEventImplCopyWithImpl<$Res>;
+          _$LoadMainEventImpl value, $Res Function(_$LoadMainEventImpl) then) =
+      __$$LoadMainEventImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
@@ -211,9 +213,8 @@ class __$$LoadMainEventImplCopyWithImpl<$Res>
     extends _$MainEventCopyWithImpl<$Res, _$LoadMainEventImpl>
     implements _$$LoadMainEventImplCopyWith<$Res> {
   __$$LoadMainEventImplCopyWithImpl(
-    _$LoadMainEventImpl _value,
-    $Res Function(_$LoadMainEventImpl) _then,
-  ) : super(_value, _then);
+      _$LoadMainEventImpl _value, $Res Function(_$LoadMainEventImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of MainEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -232,7 +233,7 @@ class _$LoadMainEventImpl extends LoadMainEvent with DiagnosticableTreeMixin {
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties..add(DiagnosticsProperty('type', 'MainEvent.loadData'));
+    properties.add(DiagnosticsProperty('type', 'MainEvent.loadData'));
   }
 
   @override
@@ -320,10 +321,9 @@ abstract class LoadMainEvent extends MainEvent {
 
 /// @nodoc
 abstract class _$$ErrorMainEventImplCopyWith<$Res> {
-  factory _$$ErrorMainEventImplCopyWith(
-    _$ErrorMainEventImpl value,
-    $Res Function(_$ErrorMainEventImpl) then,
-  ) = __$$ErrorMainEventImplCopyWithImpl<$Res>;
+  factory _$$ErrorMainEventImplCopyWith(_$ErrorMainEventImpl value,
+          $Res Function(_$ErrorMainEventImpl) then) =
+      __$$ErrorMainEventImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String? error});
 }
@@ -333,23 +333,22 @@ class __$$ErrorMainEventImplCopyWithImpl<$Res>
     extends _$MainEventCopyWithImpl<$Res, _$ErrorMainEventImpl>
     implements _$$ErrorMainEventImplCopyWith<$Res> {
   __$$ErrorMainEventImplCopyWithImpl(
-    _$ErrorMainEventImpl _value,
-    $Res Function(_$ErrorMainEventImpl) _then,
-  ) : super(_value, _then);
+      _$ErrorMainEventImpl _value, $Res Function(_$ErrorMainEventImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of MainEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = freezed}) {
-    return _then(
-      _$ErrorMainEventImpl(
-        freezed == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as String?,
-      ),
-    );
+  $Res call({
+    Object? error = freezed,
+  }) {
+    return _then(_$ErrorMainEventImpl(
+      freezed == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
   }
 }
 
@@ -392,9 +391,7 @@ class _$ErrorMainEventImpl extends ErrorMainEvent with DiagnosticableTreeMixin {
   @pragma('vm:prefer-inline')
   _$$ErrorMainEventImplCopyWith<_$ErrorMainEventImpl> get copyWith =>
       __$$ErrorMainEventImplCopyWithImpl<_$ErrorMainEventImpl>(
-        this,
-        _$identity,
-      );
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -484,46 +481,58 @@ mixin _$MainState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
+    required TResult Function() empty,
     required TResult Function(MainData data) loaded,
     required TResult Function(String? error) error,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
+    TResult? Function()? empty,
     TResult? Function(MainData data)? loaded,
     TResult? Function(String? error)? error,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
+    TResult Function()? empty,
     TResult Function(MainData data)? loaded,
     TResult Function(String? error)? error,
     required TResult orElse(),
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(InitialMainState value) initial,
     required TResult Function(LoadingMainState value) loading,
+    required TResult Function(EmptyMainState value) empty,
     required TResult Function(LoadedMainState value) loaded,
     required TResult Function(ErrorMainState value) error,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(InitialMainState value)? initial,
     TResult? Function(LoadingMainState value)? loading,
+    TResult? Function(EmptyMainState value)? empty,
     TResult? Function(LoadedMainState value)? loaded,
     TResult? Function(ErrorMainState value)? error,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(InitialMainState value)? initial,
     TResult Function(LoadingMainState value)? loading,
+    TResult Function(EmptyMainState value)? empty,
     TResult Function(LoadedMainState value)? loaded,
     TResult Function(ErrorMainState value)? error,
     required TResult orElse(),
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -548,20 +557,18 @@ class _$MainStateCopyWithImpl<$Res, $Val extends MainState>
 
 /// @nodoc
 abstract class _$$InitialMainStateImplCopyWith<$Res> {
-  factory _$$InitialMainStateImplCopyWith(
-    _$InitialMainStateImpl value,
-    $Res Function(_$InitialMainStateImpl) then,
-  ) = __$$InitialMainStateImplCopyWithImpl<$Res>;
+  factory _$$InitialMainStateImplCopyWith(_$InitialMainStateImpl value,
+          $Res Function(_$InitialMainStateImpl) then) =
+      __$$InitialMainStateImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
 class __$$InitialMainStateImplCopyWithImpl<$Res>
     extends _$MainStateCopyWithImpl<$Res, _$InitialMainStateImpl>
     implements _$$InitialMainStateImplCopyWith<$Res> {
-  __$$InitialMainStateImplCopyWithImpl(
-    _$InitialMainStateImpl _value,
-    $Res Function(_$InitialMainStateImpl) _then,
-  ) : super(_value, _then);
+  __$$InitialMainStateImplCopyWithImpl(_$InitialMainStateImpl _value,
+      $Res Function(_$InitialMainStateImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of MainState
   /// with the given fields replaced by the non-null parameter values.
@@ -581,7 +588,7 @@ class _$InitialMainStateImpl extends InitialMainState
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties..add(DiagnosticsProperty('type', 'MainState.initial'));
+    properties.add(DiagnosticsProperty('type', 'MainState.initial'));
   }
 
   @override
@@ -598,6 +605,7 @@ class _$InitialMainStateImpl extends InitialMainState
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
+    required TResult Function() empty,
     required TResult Function(MainData data) loaded,
     required TResult Function(String? error) error,
   }) {
@@ -609,6 +617,7 @@ class _$InitialMainStateImpl extends InitialMainState
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
+    TResult? Function()? empty,
     TResult? Function(MainData data)? loaded,
     TResult? Function(String? error)? error,
   }) {
@@ -620,6 +629,7 @@ class _$InitialMainStateImpl extends InitialMainState
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
+    TResult Function()? empty,
     TResult Function(MainData data)? loaded,
     TResult Function(String? error)? error,
     required TResult orElse(),
@@ -635,6 +645,7 @@ class _$InitialMainStateImpl extends InitialMainState
   TResult map<TResult extends Object?>({
     required TResult Function(InitialMainState value) initial,
     required TResult Function(LoadingMainState value) loading,
+    required TResult Function(EmptyMainState value) empty,
     required TResult Function(LoadedMainState value) loaded,
     required TResult Function(ErrorMainState value) error,
   }) {
@@ -646,6 +657,7 @@ class _$InitialMainStateImpl extends InitialMainState
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(InitialMainState value)? initial,
     TResult? Function(LoadingMainState value)? loading,
+    TResult? Function(EmptyMainState value)? empty,
     TResult? Function(LoadedMainState value)? loaded,
     TResult? Function(ErrorMainState value)? error,
   }) {
@@ -657,6 +669,7 @@ class _$InitialMainStateImpl extends InitialMainState
   TResult maybeMap<TResult extends Object?>({
     TResult Function(InitialMainState value)? initial,
     TResult Function(LoadingMainState value)? loading,
+    TResult Function(EmptyMainState value)? empty,
     TResult Function(LoadedMainState value)? loaded,
     TResult Function(ErrorMainState value)? error,
     required TResult orElse(),
@@ -675,20 +688,18 @@ abstract class InitialMainState extends MainState {
 
 /// @nodoc
 abstract class _$$LoadingMainStateImplCopyWith<$Res> {
-  factory _$$LoadingMainStateImplCopyWith(
-    _$LoadingMainStateImpl value,
-    $Res Function(_$LoadingMainStateImpl) then,
-  ) = __$$LoadingMainStateImplCopyWithImpl<$Res>;
+  factory _$$LoadingMainStateImplCopyWith(_$LoadingMainStateImpl value,
+          $Res Function(_$LoadingMainStateImpl) then) =
+      __$$LoadingMainStateImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
 class __$$LoadingMainStateImplCopyWithImpl<$Res>
     extends _$MainStateCopyWithImpl<$Res, _$LoadingMainStateImpl>
     implements _$$LoadingMainStateImplCopyWith<$Res> {
-  __$$LoadingMainStateImplCopyWithImpl(
-    _$LoadingMainStateImpl _value,
-    $Res Function(_$LoadingMainStateImpl) _then,
-  ) : super(_value, _then);
+  __$$LoadingMainStateImplCopyWithImpl(_$LoadingMainStateImpl _value,
+      $Res Function(_$LoadingMainStateImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of MainState
   /// with the given fields replaced by the non-null parameter values.
@@ -708,7 +719,7 @@ class _$LoadingMainStateImpl extends LoadingMainState
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties..add(DiagnosticsProperty('type', 'MainState.loading'));
+    properties.add(DiagnosticsProperty('type', 'MainState.loading'));
   }
 
   @override
@@ -725,6 +736,7 @@ class _$LoadingMainStateImpl extends LoadingMainState
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
+    required TResult Function() empty,
     required TResult Function(MainData data) loaded,
     required TResult Function(String? error) error,
   }) {
@@ -736,6 +748,7 @@ class _$LoadingMainStateImpl extends LoadingMainState
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
+    TResult? Function()? empty,
     TResult? Function(MainData data)? loaded,
     TResult? Function(String? error)? error,
   }) {
@@ -747,6 +760,7 @@ class _$LoadingMainStateImpl extends LoadingMainState
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
+    TResult Function()? empty,
     TResult Function(MainData data)? loaded,
     TResult Function(String? error)? error,
     required TResult orElse(),
@@ -762,6 +776,7 @@ class _$LoadingMainStateImpl extends LoadingMainState
   TResult map<TResult extends Object?>({
     required TResult Function(InitialMainState value) initial,
     required TResult Function(LoadingMainState value) loading,
+    required TResult Function(EmptyMainState value) empty,
     required TResult Function(LoadedMainState value) loaded,
     required TResult Function(ErrorMainState value) error,
   }) {
@@ -773,6 +788,7 @@ class _$LoadingMainStateImpl extends LoadingMainState
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(InitialMainState value)? initial,
     TResult? Function(LoadingMainState value)? loading,
+    TResult? Function(EmptyMainState value)? empty,
     TResult? Function(LoadedMainState value)? loaded,
     TResult? Function(ErrorMainState value)? error,
   }) {
@@ -784,6 +800,7 @@ class _$LoadingMainStateImpl extends LoadingMainState
   TResult maybeMap<TResult extends Object?>({
     TResult Function(InitialMainState value)? initial,
     TResult Function(LoadingMainState value)? loading,
+    TResult Function(EmptyMainState value)? empty,
     TResult Function(LoadedMainState value)? loaded,
     TResult Function(ErrorMainState value)? error,
     required TResult orElse(),
@@ -801,11 +818,140 @@ abstract class LoadingMainState extends MainState {
 }
 
 /// @nodoc
+abstract class _$$EmptyMainStateImplCopyWith<$Res> {
+  factory _$$EmptyMainStateImplCopyWith(_$EmptyMainStateImpl value,
+          $Res Function(_$EmptyMainStateImpl) then) =
+      __$$EmptyMainStateImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$EmptyMainStateImplCopyWithImpl<$Res>
+    extends _$MainStateCopyWithImpl<$Res, _$EmptyMainStateImpl>
+    implements _$$EmptyMainStateImplCopyWith<$Res> {
+  __$$EmptyMainStateImplCopyWithImpl(
+      _$EmptyMainStateImpl _value, $Res Function(_$EmptyMainStateImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of MainState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$EmptyMainStateImpl extends EmptyMainState with DiagnosticableTreeMixin {
+  const _$EmptyMainStateImpl() : super._();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'MainState.empty()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty('type', 'MainState.empty'));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$EmptyMainStateImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() empty,
+    required TResult Function(MainData data) loaded,
+    required TResult Function(String? error) error,
+  }) {
+    return empty();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function()? empty,
+    TResult? Function(MainData data)? loaded,
+    TResult? Function(String? error)? error,
+  }) {
+    return empty?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? empty,
+    TResult Function(MainData data)? loaded,
+    TResult Function(String? error)? error,
+    required TResult orElse(),
+  }) {
+    if (empty != null) {
+      return empty();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(InitialMainState value) initial,
+    required TResult Function(LoadingMainState value) loading,
+    required TResult Function(EmptyMainState value) empty,
+    required TResult Function(LoadedMainState value) loaded,
+    required TResult Function(ErrorMainState value) error,
+  }) {
+    return empty(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(InitialMainState value)? initial,
+    TResult? Function(LoadingMainState value)? loading,
+    TResult? Function(EmptyMainState value)? empty,
+    TResult? Function(LoadedMainState value)? loaded,
+    TResult? Function(ErrorMainState value)? error,
+  }) {
+    return empty?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(InitialMainState value)? initial,
+    TResult Function(LoadingMainState value)? loading,
+    TResult Function(EmptyMainState value)? empty,
+    TResult Function(LoadedMainState value)? loaded,
+    TResult Function(ErrorMainState value)? error,
+    required TResult orElse(),
+  }) {
+    if (empty != null) {
+      return empty(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class EmptyMainState extends MainState {
+  const factory EmptyMainState() = _$EmptyMainStateImpl;
+  const EmptyMainState._() : super._();
+}
+
+/// @nodoc
 abstract class _$$LoadedMainStateImplCopyWith<$Res> {
-  factory _$$LoadedMainStateImplCopyWith(
-    _$LoadedMainStateImpl value,
-    $Res Function(_$LoadedMainStateImpl) then,
-  ) = __$$LoadedMainStateImplCopyWithImpl<$Res>;
+  factory _$$LoadedMainStateImplCopyWith(_$LoadedMainStateImpl value,
+          $Res Function(_$LoadedMainStateImpl) then) =
+      __$$LoadedMainStateImplCopyWithImpl<$Res>;
   @useResult
   $Res call({MainData data});
 
@@ -817,23 +963,22 @@ class __$$LoadedMainStateImplCopyWithImpl<$Res>
     extends _$MainStateCopyWithImpl<$Res, _$LoadedMainStateImpl>
     implements _$$LoadedMainStateImplCopyWith<$Res> {
   __$$LoadedMainStateImplCopyWithImpl(
-    _$LoadedMainStateImpl _value,
-    $Res Function(_$LoadedMainStateImpl) _then,
-  ) : super(_value, _then);
+      _$LoadedMainStateImpl _value, $Res Function(_$LoadedMainStateImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of MainState
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = null}) {
-    return _then(
-      _$LoadedMainStateImpl(
-        null == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as MainData,
-      ),
-    );
+  $Res call({
+    Object? data = null,
+  }) {
+    return _then(_$LoadedMainStateImpl(
+      null == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as MainData,
+    ));
   }
 
   /// Create a copy of MainState
@@ -887,15 +1032,14 @@ class _$LoadedMainStateImpl extends LoadedMainState
   @pragma('vm:prefer-inline')
   _$$LoadedMainStateImplCopyWith<_$LoadedMainStateImpl> get copyWith =>
       __$$LoadedMainStateImplCopyWithImpl<_$LoadedMainStateImpl>(
-        this,
-        _$identity,
-      );
+          this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
+    required TResult Function() empty,
     required TResult Function(MainData data) loaded,
     required TResult Function(String? error) error,
   }) {
@@ -907,6 +1051,7 @@ class _$LoadedMainStateImpl extends LoadedMainState
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
+    TResult? Function()? empty,
     TResult? Function(MainData data)? loaded,
     TResult? Function(String? error)? error,
   }) {
@@ -918,6 +1063,7 @@ class _$LoadedMainStateImpl extends LoadedMainState
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
+    TResult Function()? empty,
     TResult Function(MainData data)? loaded,
     TResult Function(String? error)? error,
     required TResult orElse(),
@@ -933,6 +1079,7 @@ class _$LoadedMainStateImpl extends LoadedMainState
   TResult map<TResult extends Object?>({
     required TResult Function(InitialMainState value) initial,
     required TResult Function(LoadingMainState value) loading,
+    required TResult Function(EmptyMainState value) empty,
     required TResult Function(LoadedMainState value) loaded,
     required TResult Function(ErrorMainState value) error,
   }) {
@@ -944,6 +1091,7 @@ class _$LoadedMainStateImpl extends LoadedMainState
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(InitialMainState value)? initial,
     TResult? Function(LoadingMainState value)? loading,
+    TResult? Function(EmptyMainState value)? empty,
     TResult? Function(LoadedMainState value)? loaded,
     TResult? Function(ErrorMainState value)? error,
   }) {
@@ -955,6 +1103,7 @@ class _$LoadedMainStateImpl extends LoadedMainState
   TResult maybeMap<TResult extends Object?>({
     TResult Function(InitialMainState value)? initial,
     TResult Function(LoadingMainState value)? loading,
+    TResult Function(EmptyMainState value)? empty,
     TResult Function(LoadedMainState value)? loaded,
     TResult Function(ErrorMainState value)? error,
     required TResult orElse(),
@@ -981,10 +1130,9 @@ abstract class LoadedMainState extends MainState {
 
 /// @nodoc
 abstract class _$$ErrorMainStateImplCopyWith<$Res> {
-  factory _$$ErrorMainStateImplCopyWith(
-    _$ErrorMainStateImpl value,
-    $Res Function(_$ErrorMainStateImpl) then,
-  ) = __$$ErrorMainStateImplCopyWithImpl<$Res>;
+  factory _$$ErrorMainStateImplCopyWith(_$ErrorMainStateImpl value,
+          $Res Function(_$ErrorMainStateImpl) then) =
+      __$$ErrorMainStateImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String? error});
 }
@@ -994,23 +1142,22 @@ class __$$ErrorMainStateImplCopyWithImpl<$Res>
     extends _$MainStateCopyWithImpl<$Res, _$ErrorMainStateImpl>
     implements _$$ErrorMainStateImplCopyWith<$Res> {
   __$$ErrorMainStateImplCopyWithImpl(
-    _$ErrorMainStateImpl _value,
-    $Res Function(_$ErrorMainStateImpl) _then,
-  ) : super(_value, _then);
+      _$ErrorMainStateImpl _value, $Res Function(_$ErrorMainStateImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of MainState
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = freezed}) {
-    return _then(
-      _$ErrorMainStateImpl(
-        freezed == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as String?,
-      ),
-    );
+  $Res call({
+    Object? error = freezed,
+  }) {
+    return _then(_$ErrorMainStateImpl(
+      freezed == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
   }
 }
 
@@ -1053,15 +1200,14 @@ class _$ErrorMainStateImpl extends ErrorMainState with DiagnosticableTreeMixin {
   @pragma('vm:prefer-inline')
   _$$ErrorMainStateImplCopyWith<_$ErrorMainStateImpl> get copyWith =>
       __$$ErrorMainStateImplCopyWithImpl<_$ErrorMainStateImpl>(
-        this,
-        _$identity,
-      );
+          this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
+    required TResult Function() empty,
     required TResult Function(MainData data) loaded,
     required TResult Function(String? error) error,
   }) {
@@ -1073,6 +1219,7 @@ class _$ErrorMainStateImpl extends ErrorMainState with DiagnosticableTreeMixin {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
+    TResult? Function()? empty,
     TResult? Function(MainData data)? loaded,
     TResult? Function(String? error)? error,
   }) {
@@ -1084,6 +1231,7 @@ class _$ErrorMainStateImpl extends ErrorMainState with DiagnosticableTreeMixin {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
+    TResult Function()? empty,
     TResult Function(MainData data)? loaded,
     TResult Function(String? error)? error,
     required TResult orElse(),
@@ -1099,6 +1247,7 @@ class _$ErrorMainStateImpl extends ErrorMainState with DiagnosticableTreeMixin {
   TResult map<TResult extends Object?>({
     required TResult Function(InitialMainState value) initial,
     required TResult Function(LoadingMainState value) loading,
+    required TResult Function(EmptyMainState value) empty,
     required TResult Function(LoadedMainState value) loaded,
     required TResult Function(ErrorMainState value) error,
   }) {
@@ -1110,6 +1259,7 @@ class _$ErrorMainStateImpl extends ErrorMainState with DiagnosticableTreeMixin {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(InitialMainState value)? initial,
     TResult? Function(LoadingMainState value)? loading,
+    TResult? Function(EmptyMainState value)? empty,
     TResult? Function(LoadedMainState value)? loaded,
     TResult? Function(ErrorMainState value)? error,
   }) {
@@ -1121,6 +1271,7 @@ class _$ErrorMainStateImpl extends ErrorMainState with DiagnosticableTreeMixin {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(InitialMainState value)? initial,
     TResult Function(LoadingMainState value)? loading,
+    TResult Function(EmptyMainState value)? empty,
     TResult Function(LoadedMainState value)? loaded,
     TResult Function(ErrorMainState value)? error,
     required TResult orElse(),
@@ -1147,7 +1298,8 @@ abstract class ErrorMainState extends MainState {
 
 /// @nodoc
 mixin _$MainData {
-  List<MatchData> get matches => throw _privateConstructorUsedError;
+  List<MatchModel> get matches => throw _privateConstructorUsedError;
+  List<String> get scores => throw _privateConstructorUsedError;
 
   /// Create a copy of MainData
   /// with the given fields replaced by the non-null parameter values.
@@ -1161,7 +1313,7 @@ abstract class $MainDataCopyWith<$Res> {
   factory $MainDataCopyWith(MainData value, $Res Function(MainData) then) =
       _$MainDataCopyWithImpl<$Res, MainData>;
   @useResult
-  $Res call({List<MatchData> matches});
+  $Res call({List<MatchModel> matches, List<String> scores});
 }
 
 /// @nodoc
@@ -1178,17 +1330,20 @@ class _$MainDataCopyWithImpl<$Res, $Val extends MainData>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? matches = null}) {
-    return _then(
-      _value.copyWith(
-            matches:
-                null == matches
-                    ? _value.matches
-                    : matches // ignore: cast_nullable_to_non_nullable
-                        as List<MatchData>,
-          )
-          as $Val,
-    );
+  $Res call({
+    Object? matches = null,
+    Object? scores = null,
+  }) {
+    return _then(_value.copyWith(
+      matches: null == matches
+          ? _value.matches
+          : matches // ignore: cast_nullable_to_non_nullable
+              as List<MatchModel>,
+      scores: null == scores
+          ? _value.scores
+          : scores // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+    ) as $Val);
   }
 }
 
@@ -1196,12 +1351,11 @@ class _$MainDataCopyWithImpl<$Res, $Val extends MainData>
 abstract class _$$MainDataImplCopyWith<$Res>
     implements $MainDataCopyWith<$Res> {
   factory _$$MainDataImplCopyWith(
-    _$MainDataImpl value,
-    $Res Function(_$MainDataImpl) then,
-  ) = __$$MainDataImplCopyWithImpl<$Res>;
+          _$MainDataImpl value, $Res Function(_$MainDataImpl) then) =
+      __$$MainDataImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({List<MatchData> matches});
+  $Res call({List<MatchModel> matches, List<String> scores});
 }
 
 /// @nodoc
@@ -1209,45 +1363,60 @@ class __$$MainDataImplCopyWithImpl<$Res>
     extends _$MainDataCopyWithImpl<$Res, _$MainDataImpl>
     implements _$$MainDataImplCopyWith<$Res> {
   __$$MainDataImplCopyWithImpl(
-    _$MainDataImpl _value,
-    $Res Function(_$MainDataImpl) _then,
-  ) : super(_value, _then);
+      _$MainDataImpl _value, $Res Function(_$MainDataImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of MainData
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? matches = null}) {
-    return _then(
-      _$MainDataImpl(
-        matches:
-            null == matches
-                ? _value._matches
-                : matches // ignore: cast_nullable_to_non_nullable
-                    as List<MatchData>,
-      ),
-    );
+  $Res call({
+    Object? matches = null,
+    Object? scores = null,
+  }) {
+    return _then(_$MainDataImpl(
+      matches: null == matches
+          ? _value._matches
+          : matches // ignore: cast_nullable_to_non_nullable
+              as List<MatchModel>,
+      scores: null == scores
+          ? _value._scores
+          : scores // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+    ));
   }
 }
 
 /// @nodoc
 
 class _$MainDataImpl with DiagnosticableTreeMixin implements _MainData {
-  const _$MainDataImpl({final List<MatchData> matches = const []})
-    : _matches = matches;
+  const _$MainDataImpl(
+      {final List<MatchModel> matches = const [],
+      final List<String> scores = const []})
+      : _matches = matches,
+        _scores = scores;
 
-  final List<MatchData> _matches;
+  final List<MatchModel> _matches;
   @override
   @JsonKey()
-  List<MatchData> get matches {
+  List<MatchModel> get matches {
     if (_matches is EqualUnmodifiableListView) return _matches;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_matches);
   }
 
+  final List<String> _scores;
+  @override
+  @JsonKey()
+  List<String> get scores {
+    if (_scores is EqualUnmodifiableListView) return _scores;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_scores);
+  }
+
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'MainData(matches: $matches)';
+    return 'MainData(matches: $matches, scores: $scores)';
   }
 
   @override
@@ -1255,7 +1424,8 @@ class _$MainDataImpl with DiagnosticableTreeMixin implements _MainData {
     super.debugFillProperties(properties);
     properties
       ..add(DiagnosticsProperty('type', 'MainData'))
-      ..add(DiagnosticsProperty('matches', matches));
+      ..add(DiagnosticsProperty('matches', matches))
+      ..add(DiagnosticsProperty('scores', scores));
   }
 
   @override
@@ -1263,12 +1433,15 @@ class _$MainDataImpl with DiagnosticableTreeMixin implements _MainData {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MainDataImpl &&
-            const DeepCollectionEquality().equals(other._matches, _matches));
+            const DeepCollectionEquality().equals(other._matches, _matches) &&
+            const DeepCollectionEquality().equals(other._scores, _scores));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(_matches));
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(_matches),
+      const DeepCollectionEquality().hash(_scores));
 
   /// Create a copy of MainData
   /// with the given fields replaced by the non-null parameter values.
@@ -1280,10 +1453,14 @@ class _$MainDataImpl with DiagnosticableTreeMixin implements _MainData {
 }
 
 abstract class _MainData implements MainData {
-  const factory _MainData({final List<MatchData> matches}) = _$MainDataImpl;
+  const factory _MainData(
+      {final List<MatchModel> matches,
+      final List<String> scores}) = _$MainDataImpl;
 
   @override
-  List<MatchData> get matches;
+  List<MatchModel> get matches;
+  @override
+  List<String> get scores;
 
   /// Create a copy of MainData
   /// with the given fields replaced by the non-null parameter values.

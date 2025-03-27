@@ -1,16 +1,20 @@
 import 'package:kairatapp/app/api/api.dart';
 import 'package:kairatapp/main/api.dart';
-import 'package:kairatapp/main/model/match.dart';
-import 'package:kairatapp/main/model/matches.dart';
+import 'package:kairatapp/main/new_model/match_model.dart';
 
 class MainRepository {
-  // final MainApi _api;
-
-  // MainRepository(this._api);
-
-  Future<Matches?> getMatches() async {
-    final matchData = await api.getMatches();
-
+  Future<FootballData?> getMatches() async {
+    final matchData = await api.fetchLiveFixtures();
     return matchData;
+  }
+
+  List<String> scoresList(List<MatchModel> matches) {
+    return matches.map((match) {
+      if (match.score.fulltime.away == null) {
+        return '${match.score.halftime.home} : ${match.score.halftime.away}';
+      } else {
+        return '${match.score.fulltime.home} : ${match.score.fulltime.away}';
+      }
+    }).toList();
   }
 }
