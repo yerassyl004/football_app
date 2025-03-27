@@ -3,7 +3,6 @@ import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:kairatapp/details/repository/repository.dart';
 import 'package:kairatapp/main/new_model/match_model.dart';
-import 'package:kairatapp/main/repository/main_repository.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 part 'details.freezed.dart';
